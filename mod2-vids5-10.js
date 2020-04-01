@@ -83,10 +83,27 @@ let house2 = {
 console.log(house2.propertyTwo[3]);
 
 let carLot = [
-    { year: 2015, make: 'Toyota', model: 'avensis'},
-    { year: 2018, make: 'opel', model: 'corsa'},
-    { year: 2013, make: 'audi', model: 'a4'}
-
+  { year: 2015, make: "Toyota", model: "avensis" },
+  { year: 2018, make: "opel", model: "corsa" },
+  { year: 2013, make: "audi", model: "a4" }
 ];
 
 console.log(carLot);
+
+// Null Type
+
+let aaa;
+console.log(aaa);
+console.log(typeof aaa);
+
+let pattern = "xyz";
+let value = "This is just a test";
+let result = value.match(pattern);
+
+console.log(result);
+console.log(typeof result);
+// returns an object, its a fault in js
+
+if (result === null) {
+  console.log("No match was found");
+}
