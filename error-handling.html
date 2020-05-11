@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Error Handling: Try and Catch</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body></body>
+
+  <script>
+    function testTry() {
+      alert("Mathod Ran Successfully");
+    }
+    try {
+      testTry();
+      testT();
+    } catch (exception) {
+      if (exception.description == null) {
+        alert(
+          "There was an error in the code. The details are: \n " +
+            exception.message
+        );
+      } else {
+        alert(
+          "There was an error in the code. The details are: \n " +
+            exception.description
+        );
+      }
+    }
+  </script>
+</html>
