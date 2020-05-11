@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Working with XML</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body></body>
+
+  <script>
+    let xmlhttp = new XMLHttpRequest();
+    let url = "xml/invoice.xml";
+    xmlhttp.open("GET", url, false);
+    xmlhttp.send();
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      let xmlDoc = xmlhttp.responseXML;
+    }
+    // this is the xml file is local(in folder)
+
+    let number = xmlDoc.getElementsByTagName("Number")[0].childNodes[0].nodeValue
+//  This would grab the invoice number
+ </script>
+</html>
