@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Number Object, Math Object & Random Numbers</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <label>Results:</label>
+    <div id="div1"></div>
+    <button name="button1" onclick="rollDice()">Roll The Dice</button>
+  </body>
+
+  <script>
+    let myNum1 = 123.4567891;
+    let myNum2d = myNum1.toFixed(2);
+    console.log(myNum2d);
+
+    let myNum2 = 123.45678;
+    let myNumToLoc = myNum2.toLocaleString();
+    console.log(myNumToLoc);
+
+    // Math Objects & Random Numbers
+
+    function rollDice() {
+      let num1 = Math.floor(Math.random() * 6 + 1);
+      let num2 = Math.floor(Math.random() * 6 + 1);
+
+      let results = document.getElementById("div1");
+      results.innerHTML = `Dice One Result is: ${num1} Dice Two Result is ${num2}`;
+    }
+  </script>
+</html>
