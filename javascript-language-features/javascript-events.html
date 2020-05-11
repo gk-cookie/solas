@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Javascript Events</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <p id="output"></p>
+    <button onclick="buttonClicked()">Event Old</button>
+    <button class="eventNow">Event New</button>
+    <div id="myDiv">Mouse Over Me</div>
+  </body>
+
+  <script>
+    const eventNewButton = document.querySelector(".eventNow");
+    const divChange = document.getElementById("myDiv");
+    
+    function buttonClicked() {
+      console.log("Button Clicked");
+    }
+    function newEventButton(event) {
+      console.log("new event method");
+    }
+    function divFun() {
+        divChange.style.backgroundColor="red";
+    }
+
+    divChange.addEventListener('mouseover', divFun)
+    eventNewButton.addEventListener("click", newEventButton);
+  </script>
+</html>
