@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Substrings & Formatting Strings</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body></body>
+
+  <script>
+    let str = "Hello World";
+
+    let n = str.substr(2, 3);
+
+    document.writeln("This is the result of the substr method " + n + "<BR>");
+
+    let m = str.substring(2, 3);
+
+    document.writeln("This is the result of the substr method " + m + "<BR>");
+
+    let string = "Hello, Hows things";
+    let a = string.toLowerCase();
+    console.log(a);
+
+    let b = string.toUpperCase();
+    console.log(b);
+
+    let string2 = '   Well, hows things!    '
+    let c = string2.trim();
+    console.log(c);
+
+    let d = string2.bold();
+    document.writeln("This is the result of the bold method " + d + "<BR>");
+    
+  </script>
+</html>
