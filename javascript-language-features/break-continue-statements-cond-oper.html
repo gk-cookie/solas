@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Break and Continue Statements & Conditional Operators</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body></body>
+
+  <script>
+     let x = 10;
+
+     out: for (y = 0; y < 10; y++) {
+       document.write(y + "<br>");
+       myInnerLoop: do {
+         x += 1;
+
+         document.write(x + "<br>");
+         if (x == 12) {
+           // break myInnerLoop;
+           break out;
+         }
+       } while (x <= 15);
+     }
+
+    function conditionalTest(y) {
+      //  if(y >= 21 ) {
+      //    alert("welcome to the Beer Festival")
+      //  } else {
+      //    alert("sorry, too young")
+      //  }
+
+       y >= 21 ? alert("welcome to the Beer Festival") : alert("sorry boss, too young");
+
+     }
+  </script>
+  <form>
+    Number 1<input type="text" name="num1" /> <br />
+    <input
+      type="button"
+      name="button1"
+      onclick="conditionalTest(num1.value)"
+      value="Test"
+    />
+  </form>
+</html>
