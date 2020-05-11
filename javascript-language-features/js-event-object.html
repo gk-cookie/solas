@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The JavaScript Event Objecy</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <button onclick="sendEventInfo(event)" id="myButton">Press Me!</button>
+    <div id="output"></div>
+  </body>
+
+  <script>
+    function sendEventInfo(event) {
+      let information = `TimeStamp: ${event.timeStamp}`;
+      information += "<br/>Target:" + event.target.id;
+      information += "<br/>X: " + event.clientX;
+      information += "<br/>Y: " + event.clientY;
+      information += "<br/>Shift Key?: " + event.shiftKey;
+      document.getElementById("output").innerHTML = information;
+    }
+  </script>
+</html>
