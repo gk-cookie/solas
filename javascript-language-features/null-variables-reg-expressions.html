@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Null Variables & Regular Expressions</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body></body>
+
+  <script>
+      let x = {};
+      x = null;
+      alert('x=' + x + ` x is of type ${typeof x}`) 
+// Regular Expressions
+let str = `this is a sample string`;
+let regExp = /Sample/i;
+
+let check = regExp.exec(str);
+if (check) {
+  alert('found a match');
+  alert(check);
+} else {
+  alert('no match found')
+}
+
+let check2 = regExp.test(str);
+
+alert(check2);
+
+</script>
+</html>
