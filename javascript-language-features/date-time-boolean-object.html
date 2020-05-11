@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get the Date & Time & Boolean Object</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body></body>
+
+  <script>
+    let today = new Date();
+
+    let anniversary = new Date("March 20, 1987 05:00:00");
+
+    let birthday = new Date(1985, 12, 04);
+
+    document.writeln(
+      `This is the result of creating a standard Date object: ${today.toString()}`
+    );
+    document.writeln(
+      `This is the result of creating the GMTString: ${anniversary.toGMTString()}`
+    );
+    document.writeln(
+      `This is the result of creating the UTCString: ${anniversary.toUTCString()}`
+    );
+    document.writeln(
+      `This is the result of creating the LocaleString: ${birthday.toLocaleDateString()}`
+    );
+
+    console.log(`This is the day: ${today.getDay()}`);
+
+    birthday.setYear(1984);
+    console.log(`This is the new birthday: ${birthday.toLocaleDateString()}`);
+
+    // Boolean Object
+
+    a = false;
+    b = new Boolean(false);
+    document.write(typeof a); // "Boolean"
+    document.write(typeof b); // "Object"
+
+    c = Boolean(1);
+    d = Boolean(0);
+    e = Boolean(2>5);
+
+    alert(`c is ${c}`);
+    alert(`d is ${d}`);
+    alert(`e is ${e}`);
+
+    console.log(c.toString());
+    
+
+</script>
+</html>
