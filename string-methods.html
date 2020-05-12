@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>String Methods</title>
+    <link rel="stylesheet" href="../base.css" />
+  </head>
+
+  <body></body>
+
+  <script>
+      let first = "Knowledge is power but enthusiasm pulls the switch";
+      let second = "Do or Do Not, There is no try"
+      let third = '3,5,11,14,25,29,42';
+
+      console.log("whats going on".toUpperCase());
+
+      let mySplit = third.split(',');
+      console.log(mySplit);
+
+      let mySlice = first.slice(13,20);
+      console.log(mySlice);
+      
+      let mySubstr = first.substr(13,5);
+      console.log(mySubstr);
+
+      let myEndsWith = second.endsWith('try');
+      console.log(myEndsWith);
+
+      let myStartsWith = second.startsWith('Do')
+      console.log(myStartsWith);
+
+      let myInclude = second.includes('There');
+      console.log(myInclude);
+
+      let myRepeat = 'Ha!'.repeat(5);
+      console.log(myRepeat);
+
+      let myTrim = '         lots of space        ';
+      console.log(myTrim.length);
+      console.log(myTrim.trim().length);
+      
+      
+      
+      
+      
+      
+
+
+      
+  </script>
+</html>
