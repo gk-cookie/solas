@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Switching Statements</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <p id="output"></p>
+    <button onclick="checkZip()">Check Town</button>
+  </body>
+
+  <script>
+    let zipCode = "60614";
+    let town;
+
+    function checkZip() {
+      switch (zipCode) {
+        case "06611":
+          town = "Turnbull";
+          break;
+        case "06066":
+          town = "Vernon";
+          break;
+        case "06443":
+          town = "Madison";
+          break;
+        case "60614":
+          town = "Lincoln Park";
+      }
+      document.getElementById("output").innerHTML = "Town: " + town;
+    }
+  </script>
+</html>
