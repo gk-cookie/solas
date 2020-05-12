@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Encoding and Decoding URI's</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  
+  <script>
+    let newURL;
+    function setEncode(myURL) {
+      newURL = encodeURIComponent(myURL);
+      alert(newURL);
+      document.getElementById("info").innerHTML = newURL.toString();
+    }
+    
+    function setDecode() {
+      decodeURL = decodeURIComponent(newURL);
+      alert(decodeURL);
+      document.getElementById("info").innerHTML = decodeURL.toString();
+    }
+    </script>
+      <body>
+          <input type="Text" name="value1" />
+          <button name="button1" onclick="setEncode(value1.value)">Encode</button>
+          <button name="button1" onclick="setDecode(value1.value)">Decode</button>
+    
+        </body>
+</html>
