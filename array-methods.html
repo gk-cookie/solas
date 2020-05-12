@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Array Methods</title>
+    <link rel="stylesheet" href="../base.css" />
+  </head>
+
+  <body></body>
+
+  <script>
+    let names = ["cook", "gerry", "mike", "martin", "joe"];
+    let others = ["helen", "sarah", "alice", "krista"];
+
+    let lost = [4, 8, 13, 16, 18, 22, 41, 56];
+    let fibonacci = [1, 1, 2, 3, 4, 5, 8, 13, 21, 34, 56];
+
+    let combine = lost.concat(fibonacci);
+    console.log(combine);
+
+    console.log(fibonacci.join("~"));
+
+    console.log(lost.shift());
+    console.log(lost); // pop but from the front end
+
+    lost.unshift(1, 2, 3, 4);
+    console.log(lost);
+
+    console.log(names);
+    console.log(names.reverse());
+    console.log(names);
+    console.log(names.sort());
+
+    console.log(others.indexOf("gerry"));
+    
+    console.log(combine.lastIndexOf(1));
+  
+  let filtered = combine.filter((x) => {if (x <15) return x
+ })
+
+ console.log(filtered);
+
+ names.forEach((name) => console.log(`Well hows ${name}`));
+
+ console.log(filtered.every((num) => num< 16 ));
+ console.log(filtered.some((num) => num > 16 ));
+ 
+ 
+  </script>
+</html>
