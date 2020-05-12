@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript Timers</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+      <input TYPE="button" VALUE="Delayed Alert" onclick="delayAlert()">
+      <input TYPE="button" VALUE="Stop Alert" onclick="cancelAlert()">
+  </body>
+
+  <script>
+    let timeoutID;
+
+    function delayAlert() {
+      timeoutID = window.setTimeout(slowAlert, 2000);
+    }
+
+    function slowAlert() {
+      alert("That was slow");
+    }
+
+    function cancelAlert() {
+      window.clearTimeout(timeoutID);
+      alert("Alert Cancelled!!");
+    }
+  </script>
+</html>
