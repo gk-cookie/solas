@@ -15,7 +15,11 @@
       type="button"
       value="Change Colour"
       onclick="colchg()"
-    /><br />
+    />
+    <br />
+    Value Equals
+    <div id="bgcol"></div>
+    <br />
 
     Change the Background<br />
     <input
@@ -32,11 +36,15 @@
 
   <script>
     function colchg() {
-      console.log("Colour Change Button");
+      document.body.style.background = "#ffff66";
+      document.getElementById("bgcol").innerHTML =
+        document.body.style.background;
     }
 
     function imgchg() {
-      console.log("Background Change");
+      document.body.style.backgroundImage = "url('turtle.jpg')";
+      document.getElementById("bgimg").innerHTML =
+        document.body.style.backgroundImage;
     }
   </script>
 </html>
