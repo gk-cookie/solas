@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Changing the Properties of a Button</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    Change This Button:<br />
+
+    <input
+      name="btn"
+      id="btn"
+      type="button"
+      value="Click Me"
+      onclick="btnchg()"
+    /><br />
+  </body>
+
+  <script>
+    function btnchg() {
+      document.getElementById("btn").style.width = "300px";
+      document.getElementById("btn").style.height = "100px";
+      document.getElementById("btn").style.backgroundColor = "pink";
+    }
+  </script>
+</html>
