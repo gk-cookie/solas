@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finding HTML Elements by ID</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <div id="div1">Soccer</div>
+    <div id="div2">Golf</div>
+    <div id="div3">Football</div>
+    <div id="div4">Hurling</div>
+  </body>
+
+  <script>
+    let content1 = document.getElementById("div1");
+    document.writeln("text from DIV " + content1.innerHTML + "<br>");
+
+    let content4 = document.getElementById("div4");
+    document.writeln("text from DIV " + content4.innerHTML + "<br>");
+
+</script>
+</html>
