@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Changing a Page Background</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    Change the Colour<br />
+    <input
+      name="colbtn"
+      id="colbtn"
+      type="button"
+      value="Change Colour"
+      onclick="colchg()"
+    /><br />
+
+    Change the Background<br />
+    <input
+      name="bkg"
+      id="bkg"
+      type="button"
+      value="Change Background"
+      onclick="imgchg()"
+    /><br />
+    Value Equals
+    <div id="bgimg"></div>
+    <br />
+  </body>
+
+  <script>
+    function colchg() {
+      console.log("Colour Change Button");
+    }
+
+    function imgchg() {
+      console.log("Background Change");
+    }
+  </script>
+</html>
