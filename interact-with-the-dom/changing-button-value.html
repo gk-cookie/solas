@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Changing the Value of a Button</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    Change the Value<br />
+    <input name="onoff" id="onoff" type="button" value="Click Off"
+    onclick="return swap(this)";"> Value equals
+    <div id="feedback"></div>
+  </body>
+
+  <script>
+    function swap(element) {
+      if (element.value == "Click Off") {
+        element.value = "Click on";
+        document.getElementById("feedback").innerHTML = element.value;
+      }
+    }
+  </script>
+</html>
