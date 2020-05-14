@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adding List Elements Using JavaScript</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  
+  <script>
+    let listItem = 0;
+    let travelMode = "";
+    function addToList() {
+        if(listItem >= 4) {
+            listItem = 0;
+        }
+        if( listItem == 0) {
+            let travelMode = "Planes";
+        }
+        if (listItem == 1) {
+            let travelMode = "Trains"
+        }
+        if( listItem == 2) {
+            let travelMode = "Cars";
+        }
+        if (listItem == 3) {
+            let travelMode = "Boats"
+        }
+    listItem++
+    let newNode = document.createElement("Li");
+    let textNode = document.createTextNode(travelMode);
+    newNode.appendChild(textNode);
+    document.getElementById("transportation").appendChild(newNode);
+    
+    }
+
+  </script>
+    <body>
+      <ul id="transportation"></ul>
+      <button onclick="addToList()">Add to List</button>
+      <button onclick="removeFromList()">Remove from List</button>
+    </body>
+</html>
