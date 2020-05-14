@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finding and Changing HTML Elements by Class Name</title>
+    <!-- <link rel="stylesheet" href="../../base.css" /> -->
+    <style>
+      .class1 {
+        font-family: Impact;
+        font-size: 12px;
+        font-color: "black";
+        width: 200px;
+        height: 75px;
+        background-color: darkcyan;
+      }
+
+      .class2 {
+        font-family: sans-serif;
+        font-size: 20px;
+        color: "blue";
+        width: 200px;
+        height: 75px;
+        background-color: darkorange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="class2">Class 2</div>
+    <div class="class1">Class 1</div>
+    <div class="class2">Class 2</div>
+    <div class="class1">Class 1</div>
+    <input type="button" onclick="doIt()" value="GO" /><br />
+    <span id="output"></span>
+  </body>
+
+  <script>
+    function doIt() {
+      let className = document.getElementsByClassName("class1");
+      document.getElementById("output").innerHTML =
+        "Number of Classes" +
+        className[0].className +
+        " is " +
+        className.length;
+      for (var i = 0; i < className.length; i++) {
+        className[i].style.backgroundColor = "pink";
+        className[i].style.font = "20pt Calibri";
+        className[i].innerHTML = "class 3";
+      }
+    }
+  </script>
+</html>
