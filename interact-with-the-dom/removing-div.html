@@ -27,9 +27,17 @@
   </body>
 
   <script>
-function removeDiv(btnstate) {
-    let eDiv = document.getElementById("tempDiv");
-    eDiv.parentNode.removeChild(eDiv);
-}
+    function removeDiv(btnstate) {
+      if (btnstate.value == "remove") {
+        btnstate.value = "Replace";
+        let eDiv = document.getElementById("tempDiv");
+        eDiv.parentNode.removeChild(eDiv);
+      } else {
+        btnstate.value = "Remove";
+        let eDiv = document.createElement("div");
+        eDiv.id = "tempDiv";
+        document.body.appendChild(eDiv);
+      }
+    }
   </script>
 </html>
