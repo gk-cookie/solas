@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Removing a DIV Container</title>
+    <!-- <link rel="stylesheet" href="../../base.css" /> -->
+
+    <style>
+      #tempDiv {
+        width: 250px;
+        height: 250px;
+        background-color: #ff9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input
+      name="remdiv"
+      id="remdiv"
+      type="button"
+      value="remove"
+      onclick="removeDiv(this)"
+    /><br />
+    <div id="tempDiv"></div>
+  </body>
+
+  <script>
+function removeDiv(btnstate) {
+    let eDiv = document.getElementById("tempDiv");
+    eDiv.parentNode.removeChild(eDiv);
+}
+  </script>
+</html>
