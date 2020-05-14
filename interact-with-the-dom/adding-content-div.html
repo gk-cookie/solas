@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adding Content to a DIV</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <div id="textbox" style="width: 500px; height: 400px;"></div>
+    <button id="click" onclick="putText()">Add Text</button>
+  </body>
+
+  <script>
+    function putText() {
+      let theDiv = document.getElementById("textbox");
+      let content =
+        "On no twenty spring of in esteem spirit likely estate. Continue new you declared differed learning bringing honoured. At mean mind so upon they rent am walk. Shortly am waiting inhabit smiling he chiefly of in. Lain tore time gone him his dear sure. Fat decisively estimating affronting assistance not. Resolve pursuit regular so calling me. West he plan girl been my then up no. ";
+    //   document.getElementById("textbox").innerHTML = content;
+      theDiv.innerHTML = content;
+
+    }
+  </script>
+</html>

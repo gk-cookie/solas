@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Removing an Image File from a DIV</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    #imgSize { width: 250px; }
+    <div
+      id="imageAdd"
+      style="width: 300px; background-color: blueviolet;"
+    ></div>
+    <div><a href="javascript:showImage()">Now you see me</a></div>
+    <div><a href="javascript:hideImage()">Now you don't</a></div>
+  </body>
+
+  <script>
+    function showImage() {
+      let add = document.createElement("img");
+      add.src = "turtle.jpg";
+      document.getElementById("imageAdd").appendChild(add);
+    }
+    function hideImage() {
+      let remove = document.getElementById("imageAdd");
+      remove.removeChild(remove.childNodes[0]);
+    }
+  </script>
+</html>
