@@ -11,6 +11,7 @@
   <script>
     let listItem = 0;
     let travelMode = "";
+
     function addToList() {
         if(listItem >= 4) {
             listItem = 0;
@@ -28,11 +29,16 @@
             let travelMode = "Boats"
         }
     listItem++
-    let newNode = document.createElement("Li");
+    let newNode = document.createElement("li");
     let textNode = document.createTextNode(travelMode);
     newNode.appendChild(textNode);
     document.getElementById("transportation").appendChild(newNode);
     
+    }
+
+    function removeFromList() {
+      let list = document.getElementById("transportation");
+      list.removeChild(list.childNodes[0]);
     }
 
   </script>
