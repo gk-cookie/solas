@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adding HTML Elements Using document.createElement</title>
+    <style>
+        .class1 {
+          font-family: Impact;
+          font-size: 12px;
+          font-color: "black";
+          width: 200px;
+          height: 75px;
+          background-color: darkcyan;
+        }
+  
+        .class2 {
+          font-family: sans-serif;
+          font-size: 20px;
+          color: "blue";
+          width: 200px;
+          height: 75px;
+          background-color: darkorange;
+        }
+      </style>  
+</head>
+
+  <body>
+    
+     <input type="button" onclick="doIt()" value="GO" /><br><br>
+        </form>
+     <span id="output"></span>
+    </body>
+
+  <script>
+      function doIt() {
+          let btn = document.createElement("button");
+          btn.innerHTML = "New";
+          document.body.appendChild(document.createElement('br'));
+          document.body.appendChild(btn);
+          let forms = new Array;
+          for (let i = 0; i < 5; i++) {
+            document.body.appendChild(document.createElement('br'));
+            forms[i] = document.createElement("input");
+            forms[i].type = "text";
+            forms[i].value = "form field" + i;
+            document.body.appendChild(forms[i]);              
+          }
+        }
+  </script>
+</html>
