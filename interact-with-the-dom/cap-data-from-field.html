@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Capturing Data From Field in Real Time</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    My Favourite Ice Cream Flavour is:<br />
+    <input type="text" id="showme" /><br />
+    <input type="submit" value="Submit" />
+    <p>Select your Favourite Ice Cream:</p>
+    <form action="form_submit.php">
+      <input
+        type="radio"
+        name="icecream"
+        onclick="iceCream(this.value)"
+        value="Vanilla"
+      />Vanilla<br />
+      <input
+        type="radio"
+        name="icecream"
+        onclick="iceCream(this.value)"
+        value="Chocolate"
+      />Chocolate<br />
+      <input
+        type="radio"
+        name="icecream"
+        onclick="iceCream(this.value)"
+        value="Strawberry"
+      />Strawberry<br />
+      <input
+        type="radio"
+        name="icecream"
+        onclick="iceCream(this.value)"
+        value="Neopolitan"
+      />Neopolitan<br />
+      <input
+        type="radio"
+        name="icecream"
+        onclick="iceCream(this.value)"
+        value="Rocky Road"
+      />Rocky Road<br />
+    </form>
+  </body>
+
+  <script>
+      function iceCream(icecream) {
+          document.getElementById("showme").value = icecream;
+      }
+  </script>
+</html>
