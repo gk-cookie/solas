@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Creating an Automated Redirect</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+      Redirect in <span id="counter">10</span> second(s)
+  </body>
+
+  <script>
+      setInterval(function() {countDown()}, 1000);
+      function countDown() {
+          let count = document.getElementById("counter");
+          if (parseInt(count.innerHTML) <= 0) {
+              locaction.href = "homepage.html";
+
+          }
+          count.innerHTML = parseInt(count.innerHTML) - 1;
+      }
+  </script>
+</html>
