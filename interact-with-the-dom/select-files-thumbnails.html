@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Selecting Files and Create Image Thumbnails</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    Input file:
+    <input type="file" onchange="selectFile(event)" />
+    <br />
+    <div>
+      <img id="image1" width="100" />
+      <img id="image2" width="100" />
+      <img id="image3" width="100" />
+      <img id="image4" width="100" />
+      <img id="image5" width="100" />
+    </div>
+  </body>
+
+  <script>
+    let counter = 1;
+    function selectFile(event) {
+      let selFile = event.target.files[0];
+      let readFile = new FileReader();
+      let container = "image" + counter;
+      let imgLoc = document.getElementById(container);
+      imgLoc.title = selFile.name;
+      readFile.onload = function (event) {
+        imgLoc.source = event.target.result;
+        readFile.readAsDataURL(selFire);
+        counter++;
+      };
+    }
+  </script>
+</html>
