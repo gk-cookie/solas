@@ -5,39 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Form Validation HTML5 Form Enhancements</title>
     <link rel="stylesheet" href="../../base.css" />
-<style type="text/css" media="all">
-span {
-    width: 175px;
-    display: block;
-    float: left;
-}
-input {
-    float: left;
-}
+    <style type="text/css" media="all">
+      span {
+        width: 175px;
+        display: block;
+        float: left;
+      }
+      input {
+        float: left;
+      }
 
-P {
-    padding-top: 10px;
-    clear: all;
-}
+      P {
+        padding-top: 10px;
+        clear: all;
+      }
 
-h2 {
-    padding-top: 20px;
-    clear: all;
-}
-label {
-    padding-right: 20px;
-}
-</style> 
-</head>
+      h2 {
+        padding-top: 20px;
+        clear: all;
+      }
+      label {
+        padding-right: 20px;
+      }
+    </style>
+  </head>
 
   <body>
-      <h1>Creating Forms</h1>
+    <h1>Creating Forms</h1>
 
-<form method="POST" action="form.aspx">
+    <form method="POST" action="form.aspx">
+      <h2>Email</h2>
+      <p>
+        <label
+          ><span>Email Input: </span
+          ><input type="email" name="emailInput" required
+        /></label>
+      </p>
 
-    <p><button>Submit</button></p>
-</form>
-    </body>
+      <p>
+        <label
+          ><span>Telephone Input: </span
+          ><input type="tel" name="tellInput" required /></label
+        >The browser should do nothing special
+      </p>
+
+      <p>
+        <label
+          ><span>URL Input: </span><input type="url" name="urlInput" required
+        /></label>
+      </p>
+
+      <p><button>Submit</button></p>
+    </form>
+  </body>
 
   <script></script>
 </html>
