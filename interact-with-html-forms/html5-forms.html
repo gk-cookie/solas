@@ -41,20 +41,73 @@
           ><input type="email" name="emailInput" required
         /></label>
       </p>
-
+      <h2>Telephone</h2>
       <p>
         <label
           ><span>Telephone Input: </span
           ><input type="tel" name="tellInput" required /></label
         >The browser should do nothing special
       </p>
-
+      <h2>URL</h2>
       <p>
         <label
           ><span>URL Input: </span><input type="url" name="urlInput" required
         /></label>
       </p>
+      <h2>Numeric Values</h2>
+      <p>
+        <label
+          ><span>Number Input: </span
+          ><input type="number" name="numberInput" required
+        /></label>
+      </p>
 
+      <h2>Range</h2>
+      <p>
+        <label
+          ><span>Range Input: </span
+          ><input type="range" name="rangeInput" required value=42
+        /></label> Value Set to 42. Default = 0 - 100
+      </p>
+
+      <h2>Data List</h2>
+      <p>
+        <label
+          ><span>Data List: </span
+          ><input type="text" list="someList" />
+          <datalist id="someList">
+              <option label="First" Value="First"></option>
+              <option label="Second" Value="Second"></option>
+              <option label="Third" Value="Third"></option>
+            </datalist>
+        </label>
+      </p>
+
+      <h2>Attributes</h2>
+      <p>
+        <label
+          ><span>Autofocus: </span
+          ><input type="text" autofocus="true"
+        /></label>
+      </p>
+      <p>
+        <label
+          ><span>Pattern: </span
+          ><input type="text" pattern="^\d{5}(-\d{4})?$">Hint: Use a zipcode
+        </label>
+      </p>
+      <p>
+        <label
+          ><span>Placeholder: </span
+          ><input type="text" placeholder="Hello Everyone"
+        /></label>
+      </p>
+      <p>
+        <label
+          ><span>Step: </span
+          ><input type="number" step="5"
+        />Must be divisbile by 5</label>
+      </p>
       <p><button>Submit</button></p>
     </form>
   </body>
