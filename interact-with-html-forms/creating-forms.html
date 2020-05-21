@@ -38,7 +38,7 @@
           <legend>Pizza Toppings</legend>
         <p><label> <input type="checkbox" name="toppings" value="Bacon"> Bacon </label></p>
         <p><label> <input type="checkbox" name="toppings" value="Cheese">Extra Cheese</label></p>
-        <p><label> <input type="checkbox" name="toppings" value="Pepperoni"> Some Roni</label></p>
+        <p><label> <input type="checkbox" name="toppings" value="Pepperoni" checked> Some Roni</label></p>
         <p><label> <input type="checkbox" name="toppings" value="Mushrooms">Musshrooms</label></p>
         <p><label> <input type="checkbox" name="toppings" value="Peppers">Peppers</label></p>
 
@@ -46,14 +46,19 @@
 
     <fieldset>
         <p>Crust
-<select name="crust">
+<select name="crust" multiple>
 <option value="c1">Normal</option>
-<option value="c2">Deep Dish (+ $2)</option>
+<option value="c2" selected>Deep Dish (+ $2)</option>
 <option value="c3">Thin Crust</option>
 </select>
         </p>
       
   </fieldset>
+
+  <p><label for="comments">Delivery Instructions:</label>
+<textarea name="comments" cols="50" rows="5" maxlength="1000"></textarea>
+  </p>
+  <p><input type="submit" value="Continue to Step "></p>
     </form>
   </body>
 
