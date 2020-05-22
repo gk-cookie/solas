@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Questions</title>
+    <script>
+      var min = Math.min(23, -3.7, -3.2, 12, 1);
+
+      var max = Math.max(-2, 7.9, 8.7, 6, 1.1);
+
+      alert("min value after rounding: " + Math.round(min));
+
+      alert("max value after rounding: " + Math.round(max));
+
+      let x = 3;
+      let v = 13;
+      v %= 2;
+      x += 5;
+      console.log(x);
+      console.log(v);
+
+      function doesItChange(number, origDate) {
+        number++;
+        origDate.setDate(origDate.getDate() + 1);
+      }
+
+      let num = 1;
+      let originalDate = new Date();
+      doesItChange(num, originalDate);
+      alert("num: " + num + "\noriginalDate: " + originalDate);
+
+      let animals = ["chimp", "panda", "canary", "dog"];
+      for (let x = 0; x < animals.length; x++) {
+        document.writeln(animals[x++]);
+      }
+
+      let timestamp = new Date();
+      console.log(timestamp);
+      console.log(timestamp.toString());
+
+      let martyDocPast = new Date("1985");
+      let martyDocFut = new Date("2015");
+      if (martyDocPast < martyDocFut) {
+        alert("You sent me back to the future");
+      } else if (martyDocPast > martyDocFut) {
+        alert("back to the future");
+      } else "tt is dangerous";
+
+      let xx = 3;
+      let yy = xx++;
+      let aa = 3;
+      let bb = ++aa;
+      let z = 10;
+      let w = z--;
+      let d = 10;
+      let f = --d;
+
+      document.writeln(yy);
+      document.writeln(bb);
+      document.writeln(w);
+      document.writeln(f);
+
+      console.log(Math.pow(2, 4));
+
+      let p = 4;
+      do {
+        document.writeln(--p);
+      } while (p > 4);
+    </script>
+  </head>
+  <body></body>
+</html>
