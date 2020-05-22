@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scratches</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <form>
+      Amount: <input type="text" id="bill" name="bill" /><br />
+      <br />
+      <input type="submit" value="Submit" onClick="calculateVAT()" />
+    </form>
+
+    <script>
+      function calculateVAT() {
+        var bill = document.getElementById("bill").value;
+        var vatDue = bill * 0.1;
+        var totalAmountDue = bill + vatDue;
+        document.getElementById("output").innerHTML = totalAmountDue;
+      }
+    </script>
+
+    <p id="output"></p>
+  </body>
+</html>
