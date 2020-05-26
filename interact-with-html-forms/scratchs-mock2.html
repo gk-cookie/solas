@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mock Exam 2</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <p>Click to create a H1 element with some text, and append it to the DIV element.</p>
+    <div id="div">DIV element</div>
+    
+    <button onclick="createNewHeader()">Press</button>
+  
+    <body onload="displayCalc()">
+
+        <h1>JavaScript Testing Drill</h1>
+        <H1 id="MyHeader" onclick="changeHeaderText()">Click to see a new message!</H1>
+</body>
+
+  <script>
+   function displayCalc() {
+  var x = 96;
+  var y = 12;
+  document.innerHTML(x%y);
+}
+
+function changeHeaderText() {
+  document.getElementById("MyHeader").innerHTML = "Good Luck with your Exam";
+}
+
+let a = 3;
+let b = "9";
+let c = "33";
+let d = 3;
+console.log(a + b + c);
+console.log(c + d);
+console.log(b + c);
+console.log(a + c + d);
+console.log(a + d + c);
+console.log(a + b);
+
+let courtIsFree = false;
+let isOpponentFree = true;
+let isForecastGood = false;
+let userMessage = "game on";
+
+if (courtIsFree) {
+  if (isOpponentFree) {
+    if (isForecastGood) {
+    } else {
+      userMessage = "sorry, weather is bad";
+    }
+  } else {
+    userMessage = "sorry, opponent cant make it";
+  }
+} else {
+  userMessage = "sorry, court is booked";
+}
+
+let z = 4;
+
+for (let x = 0; x <= z; x++) {
+  if (x == z) {
+    break;
+  }
+  z--;
+}
+console.log('Brain Buster - Rounds Played - Rounds played: " + x + " ');
+
+function createNewHeader() {
+  var header = document.createElement("H1");
+  var text = document.createTextNode("This is a H1.");
+  header.appendChild(text);
+  document.getElementById("div").appendChild(header);
+}
+
+let g;
+let h = null;
+let j = 100;
+let k = "100";
+console.log(g == h);
+console.log(g === h);
+console.log(j == k);
+console.log(j === k);
+
+let q = 1;
+let w = "1";
+let e = 10;
+let r;
+let t = undefined;
+console.log(q + w);
+console.log(q + e);
+console.log(q + r);
+console.log(q + t);
+
+
+
+
+
+let course = {
+  courseCode: "98-382",
+  courseTitle: "intoduction to JS",
+  courseDuration: 20,
+};
+
+let name = prompt("please enter name")
+
+alert(
+  "Welcome to the " + course.courseTitle
+    +" course " +
+    name +
+    ".\nYou have " + course['courseDuration']
+    +" weeks to complete the course.\nBest of luck!"
+);
+
+
+  </script>
+</html>
