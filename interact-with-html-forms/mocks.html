@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Functions</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body onload="alert('the screen is ' + screen.width + ' x ' + screen.height)">
+    <p>Determine the screen width and height</p>
+
+    <h2>Mr C's TO</h2>
+    <h1>Tropical fruits</h1>
+    <p id="output"></p>
+    <form id="myForm" action="/action_page.php"></form>
+    Side of Chips:
+    <input type="text" id="side_of_chips" name="Side of Chips" /><br />
+    Mint Chololate Ice Cream:
+    <input
+      type="text"
+      id="mint_chocolate_ice_cream"
+      name="Mint Chocolate Ice Cream"
+    /><br /><br />
+    <input type="submit" value="Submit" onsubmit="return processOrders()" />
+
+    Enter your Name: <input type="text" id="user_entry" value="" />
+    <button onclick="testStrings()">Submit</button>
+    <p id="output"></p>
+  </body>
+
+  <script>
+    let h = 12;
+    let i = 13;
+    let z = 14;
+    let result = (i <= h++) || (--z >= i);
+    console.log(result);
+
+          function processOrders() {
+              let s_Chips = document.getElementById("side_of_chips").value;
+              let m_ice = document.getElementById("mint_chocolate_ice_cream").value
+
+              alert("Num of Items" + (s_Chips + m_ice));
+              return false;
+          }
+
+    let a = 10;
+    let b = 11;
+    let c = 11;
+
+    let result = (a++ == b++) && (++c > a);
+    console.log(a, b, c);
+    console.log(result);
+
+    let x=10;
+    x+=20;
+    x%20;
+    console.log(x);
+
+    function testStrings() {
+          var user_entry = document.getElementById("user_entry").value.toLowerCase();
+          var anotherString = new String("josh");
+          if(user_entry == anotherString){
+            document.getElementById("output").innerHTML = "Strings match!";
+          }else{
+            document.getElementById("output").innerHTML = "Strings don't match!";
+          }
+       }
+    function disTp() {
+          let tropFruit = ["pineapple", "mango", "Star Fruit", "guava", "pome"];
+
+
+              tropFruit.reverse();
+              tropFruit.shift();
+              tropFruit.pop();
+              let postMango = tropFruit.indexOf("mango");
+              console.log(postMango);
+    }
+    disTp();
+              tropFruit.sort()
+
+              console.log(tropFruit);
+            }
+          disTp();
+        var openingDate = new Date('2018,December 18,6:00 PM');
+    var openingDate1 = new Date('6:00 PM,18/12/2018');
+    var openingDate2 = new Date('6:00 PM,2018,December 18');
+    var openingDate3 = new Date('December 18, 2018 6:00 PM');
+        // console.log(opdate.getMonth());
+
+        console.log(openingDate);
+        console.log(openingDate1);
+        console.log(openingDate2);
+        console.log(openingDate3);
+
+        function calMemRate() {
+            let age = 36;
+            let memRate = 0;
+            let vat = 10;
+        if(age > 0 ) {
+            memRate = (25 +vat);
+        } else if ( (age > 18) && (age <= 21) ) {
+            memRate = (100 + vat);
+        } else if ( ( age > 21 ) && (age <= 55)) {
+            memRate = (200 + vat);
+        } else {
+            memRate = (120 + vat)
+        }
+        console.log(memRate);
+        }
+        calMemRate();
+    var tropical_fruits = new String ["Pineapples", "Star Fruit", "Mangos"];
+    document.getElementById("output").innerHTML = tropical_fruits;
+  </script>
+</html>
